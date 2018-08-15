@@ -13,11 +13,12 @@
 
     <!-- DataSource -->
     <data-source>
-        <name></name> <!-- java:global/JPAExampleDataSource -->
-        <class-name></class-name> <!-- com.mysql.jdbc.jdbc2.optional.MysqlXADataSource -->
+
+        <name>java:jboss/datasources/spk-mysql</name> <!-- java:global/JPAExampleDataSource -->
+        <class-name>mysql-connector-java-5.1.44-bin.jar_com.mysql.jdbc.Driver_5_1</class-name> <!-- com.mysql.jdbc.jdbc2.optional.MysqlXADataSource -->
         <server-name>localhost</server-name> <!-- ${ENV=DB_HOST} -->
         <port-number>3306</port-number>
-        <database-name>test</database-name>
+        <database-name>spk</database-name>
         <user>root</user> <!-- ${ENV=JDBC_USER} -->
         <password>123456</password> <!-- ${ENV=JDBC_PASSWORD} -->
 
