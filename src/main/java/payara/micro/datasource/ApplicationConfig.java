@@ -5,8 +5,18 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-@ApplicationPath("webresources")
+@ApplicationPath("/api")
 public class ApplicationConfig extends Application {
+
+
+    /**
+     *
+     *  OBS: Em outro exemplo do próprio payara, estes métodos abaixo não foram utilizados
+     *
+     *
+     */
+
+
 
     @Override
     public Set<Class<?>> getClasses() {

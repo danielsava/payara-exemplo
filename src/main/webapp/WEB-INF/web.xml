@@ -5,13 +5,16 @@
          version="3.1">
 
 
+    <!-- Payara: Session -->
+    <distributable/>
+
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
 
-    <!-- DataSource -->
+    <!-- Payara: DataSource -->
     <data-source>
 
         <name>java:jboss/datasources/spk-mysql</name> <!-- java:global/JPAExampleDataSource -->
@@ -42,6 +45,7 @@
             <name>fish.payara.validation-classname</name>
             <value>org.glassfish.api.jdbc.validation.MySQLConnectionValidation</value>
         </property>
+
     </data-source>
 
 

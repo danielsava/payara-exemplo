@@ -42,6 +42,28 @@
             <groupId>fish.payara.extras</groupId>
             <artifactId>payara-micro</artifactId>
             <version>5.182</version> <!-- 4.1.1.171.1 -->
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>fish.payara.api</groupId>
+            <artifactId>payara-api</artifactId>
+            <version>5.182</version> <!-- 4.1.1.171.1 -->
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+            <version>1.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>3.8</version> <!-- 3.10.4 -->
+            <scope>provided</scope>
         </dependency>
 
         <!-- Java EE 7 -->
@@ -58,6 +80,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.46</version>
         </dependency>
+
+        <!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.2.10.Final</version>
+        </dependency>
+
 
 
 
