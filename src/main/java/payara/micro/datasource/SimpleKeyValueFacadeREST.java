@@ -8,13 +8,23 @@ import java.util.List;
 
 public class SimpleKeyValueFacadeREST extends AbstractFacade<SimpleEntity> {
 
-    @PersistenceContext(unitName = "JPADatasourceExamplePU")
+    @PersistenceContext
     private EntityManager em;
 
 
     public SimpleKeyValueFacadeREST() {
         super(SimpleEntity.class);
     }
+
+
+    @GET
+    @Path("/teste/{nome}")
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public String teste(@PathParam("nome") String nome) {
+        return "{\"nome\":\"" + nome + "\"}";
+    }
+
 
     @POST
     @Override

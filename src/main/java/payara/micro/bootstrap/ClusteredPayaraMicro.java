@@ -8,7 +8,6 @@ import fish.payara.micro.data.InstanceDescriptor;
 public class ClusteredPayaraMicro // implements PayaraClusterListener
 {
 
-    /* */
     public static void main(String[] args) {
 
         try {
@@ -20,21 +19,6 @@ public class ClusteredPayaraMicro // implements PayaraClusterListener
         } catch (BootstrapException e) {
             e.printStackTrace();
         }
-
-
-
-
-        /*
-        PayaraMicroRuntime runtime = PayaraMicro.getInstance()
-            //.setDeploymentDir(new File("../payara-micro-examples/target")) // Diretório de Deploy
-            .setHttpAutoBind(true)                                           // Cluster Session Hazelcast
-            .setInstanceName("Cluster PayaraMicro Teste")                    // Nome da Instância
-            .bootStrap();                                                    // Inicializa o Payara Micro
-
-        runtime.addClusterListener(new ClusteredPayaraMicro());
-        */
-
-
 
     }
 
