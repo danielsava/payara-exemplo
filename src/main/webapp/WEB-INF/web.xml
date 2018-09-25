@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
 
     <!-- Payara: Session -->
     <distributable/>
@@ -18,7 +22,7 @@
     <data-source>
 
         <name>java:app/datasources/spk</name> <!-- java:global/JPAExampleDataSource -->
-        <class-name>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</class-name> <!-- com.mysql.jdbc.jdbc2.optional.MysqlXADataSource mysql-connector-java-5.1.47-bin.jar_com.mysql.jdbc.Driver_5_1 -->
+        <class-name>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</class-name>
         <server-name>localhost</server-name> <!-- ${ENV=DB_HOST} -->
         <port-number>3306</port-number>
         <database-name>spk</database-name>
@@ -49,8 +53,6 @@
 
     </data-source>
 
-    <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-    </welcome-file-list>
+
 
 </web-app>

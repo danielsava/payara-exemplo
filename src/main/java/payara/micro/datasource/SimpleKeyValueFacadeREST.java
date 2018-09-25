@@ -4,8 +4,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
+@Path("/rest/")
 public class SimpleKeyValueFacadeREST extends AbstractFacade<SimpleEntity> {
 
     @PersistenceContext
@@ -19,10 +21,9 @@ public class SimpleKeyValueFacadeREST extends AbstractFacade<SimpleEntity> {
 
     @GET
     @Path("/teste/{nome}")
-    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public String teste(@PathParam("nome") String nome) {
-        return "{\"nome\":\"" + nome + "\"}";
+    public Response teste(@PathParam("nome") String nome) {
+        return Response.ok("{\"nome\":\"" + nome + "\"}", MediaType.APPLICATION_JSON).build();
     }
 
 
