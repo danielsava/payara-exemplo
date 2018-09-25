@@ -7,17 +7,15 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/rest/")
+@Path("/exemplo/")
 public class SimpleKeyValueFacadeREST extends AbstractFacade<SimpleEntity> {
 
     @PersistenceContext
     private EntityManager em;
 
-
     public SimpleKeyValueFacadeREST() {
         super(SimpleEntity.class);
     }
-
 
     @GET
     @Path("/teste/{nome}")
@@ -25,7 +23,6 @@ public class SimpleKeyValueFacadeREST extends AbstractFacade<SimpleEntity> {
     public Response teste(@PathParam("nome") String nome) {
         return Response.ok("{\"nome\":\"" + nome + "\"}", MediaType.APPLICATION_JSON).build();
     }
-
 
     @POST
     @Override

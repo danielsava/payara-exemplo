@@ -36,6 +36,9 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <startClass>payara.micro.bootstrap.Startup01</startClass>
+                </configuration>
             </plugin>
 
         </plugins>
